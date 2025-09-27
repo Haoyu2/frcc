@@ -84,7 +84,7 @@ sudo insmod tcp_frcc.ko
 1. Refer to `experiments/cc_bench/setup.sh` for installing mahimahi, iperf3,
    etc. used for running experiments. Note, you may want to deactivate conda
 environment, as the environment's protobuf may interfere with mahimahi and
-genericCC protobuf. Reactivate after running the script.
+genericCC protobuf. Reactivate the conda environment after running the script.
 2. Refer to `experiments/cc_bench/boot.sh` for setting up kernel parameters
    (e.g., TCP buffers). This needs to be run after every boot.
 
@@ -151,7 +151,7 @@ working fine. We typically leave this running overnight.
 
     ./plot_all.sh
     # This will parse all the logs and copy all the relevant figures to
-    # `experiments/data/figs/frcc-nsdi26/evaluation`. See plot.sh for mapping
+    # `experiments/data/figs/frcc-nsdi26/evaluation`. See plot_all.sh for mapping
     # between the pdf files and figures in paper.
     ```
 
@@ -203,7 +203,7 @@ working fine. We typically leave this running overnight.
 
     # Figure 1, 2, 26, 27
     ## The previous sweeps produce the logs for these figures.
-    ## See or run plot.sh to aggregate and copy the figures to
+    ## See or run plot_all.sh to aggregate and copy the figures to
     ## `experiments/data/figs/frcc-nsdi26/evaluation/timeseries`.
 
     # Convergence (Figure 23)
