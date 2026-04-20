@@ -1,0 +1,25 @@
+[Unit]
+Description=FRCC Nightly Evaluation Suite
+After=network.target
+
+[Service]
+Type=oneshot
+User=%i
+WorkingDirectory=%h/Projects/frcc
+# Load user environment (conda paths etc.)
+EnvironmentFile=%h/frcc-automation/config.env
+# Chain: preflight → smoke → full sweeps → proofs
+ExecStart=/bin/bash -c '\
+    RUN_ID=$(date -u +%%Y-%%m-%%dT%%H%%M%%SZ) && \
+    bash %h/frcc-automation/bin/run_smoke.sh "${RUN_ID}" && \
+    bash %h/frcc-automation/bin/run_full_suite.sh "${RUN_ID}" && \
+    bash %h/frcc-automation/bin/run_proofs.sh "${RUN_ID}"'
+# Clean up stuck experiment processes on failure
+ExecStopPost=/bin/bash -c 'bash %h/Projects/frcc/experiments/cc_bench/clean_processes.sh || true'
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=28800
+
+[Install]
+WantedBy=multi-user.target
+

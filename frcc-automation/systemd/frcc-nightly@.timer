@@ -1,0 +1,13 @@
+[Unit]
+Description=FRCC Nightly Evaluation Timer
+
+[Timer]
+# Run every night at 22:00 local time
+OnCalendar=*-*-* 22:00:00
+# If a run was missed (machine was off), run it once when the machine comes up
+Persistent=true
+Unit=frcc-nightly@%i.service
+
+[Install]
+WantedBy=timers.target
+
