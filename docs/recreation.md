@@ -1,6 +1,8 @@
 # FRCC Evaluation Recreation Guide
 
 > If you are running on ESXi with an Ubuntu VM, see `docs/esxi-ubuntu-vm-recreation-and-automation.md` for VM specs, bring-up steps, and an automation plan.
+>
+> For a detailed explanation of every experiment type, what it tests, and which paper figures it produces, see `docs/experiment-types.md`.
 
 This document provides a practical, command-first path to recreate the FRCC evaluation from this repository.
 
