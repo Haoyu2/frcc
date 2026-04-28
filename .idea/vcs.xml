@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/experiments/cc_bench" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/experiments/cc_bench/external/plot_config_light" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/experiments/ccas/genericCC" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/frcc_kernel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/proofs/external/plot_config_light" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/proofs/external/pyz3_utils" vcs="Git" />
+  </component>
+</project>
